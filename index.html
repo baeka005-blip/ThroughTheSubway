@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Through The Subway</title>
+<link rel="icon" type="image/png" href="Images/MetroCard.png">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="opening">
+    <h1>ENTER THE SUBWAY?</h1>
+    <div class="choices">
+        <button class="choice" onclick="enterSubway('pay')">PAY $3</button>
+        <button class="choice" onclick="enterSubway('evade')">FARE EVASION</button>
+    </div>
+</section>
+
+<section id="main">
+    <div class="site-title">THROUGH THE SUBWAY</div>
+    <button class="exit-button" onclick="exitSubway()">EXIT SUBWAY ↑</button>
+
+    <div id="slider">
+
+        
+        <div class="page" id="aboutPage">
+            <div class="about-content">
+
+                <div class="about-heading">ABOUT</div>
+
+                <p class="about-text">
+                    <em>THROUGH THE SUBWAY</em> is a conceptual online interpretation of
+                    <em>UNDER THE SURFACE</em>, a book documenting the subway tiles of New York City.
+                </p>
+
+                <p class="about-text">
+                    It combines the geometric forms of square tiles with a stylized structure of a subway system.
+                    This website turns each square “train” into... users travel through the different stations,
+                    they encounter four stories from the original book
+                </p>
+
+                <div class="line-list">
+
+                    <div class="line-row">
+                        <div class="line-number dark">1</div>
+                        <div class="line-name">Line 1: A CITY SET IN TILE</div>
+                    </div>
+
+                    <div class="line-row">
+                        <div class="line-number cream">2</div>
+                        <div class="line-name">Line 2: TAKE A CLOSER LOOK</div>
+                    </div>
+
+                    <div class="line-row">
+                        <div class="line-number blue">3</div>
+                        <div class="line-name">Line 3: WHO PUT THIS HERE?</div>
+                    </div>
+
+                    <div class="line-row">
+                        <div class="line-number sage">4</div>
+                        <div class="line-name">Line 4: A RECORD OF WHAT REMAINS</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        
+        <div class="page" id="homePage">
+            <div class="instruction" id="instruction">FIND YOUR TRAIN</div>
+            <svg id="tracks"></svg>
+            <div class="lock-message" id="lockMessage">NO FARE, NO ENTRY</div>
+        </div>
+
+        
+        <div class="page" id="creditsPage">
+            <div class="credits-wrap">
+                <div class="credits-inner">
+                    <div class="credit-text">
+                        DESIGNED BY ALISON BAEK<br>
+                        PHOTOGRAPHY BY ALISON BAEK
+                    </div>
+                    <div class="credit-grid" id="creditGrid"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <div class="lane" id="lane">
+        <div class="lane-title">EXPRESS TRAIN</div>
+        <div class="lane-line"></div>
+        <div class="lane-tick" style="left: 0%;"></div>
+        <div class="lane-tick" style="left: 50%;"></div>
+        <div class="lane-tick" style="left: 100%;"></div>
+        <div class="lane-label" style="left: 0%;">ABOUT</div>
+        <div class="lane-label" style="left: 50%;">SUBWAY</div>
+        <div class="lane-label" style="left: 100%;">CREDITS</div>
+        <div class="express-square" id="expressSquare" style="left: 50%;"></div>
+    </div>
+</section>
+
+<section id="station">
+    <button class="back-button" onclick="goBack()">← TRANSFER TRAINS</button>
+
+    <div class="station-content" id="stationContent">
+        <div class="station-number" id="stationNumber"></div>
+        <div class="station-title" id="stationTitle"></div>
+        <div class="station-text" id="stationText"></div>
+        <div class="coordinate" id="stationCoordinate"></div>
+    </div>
+
+    <div id="gallery"></div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
